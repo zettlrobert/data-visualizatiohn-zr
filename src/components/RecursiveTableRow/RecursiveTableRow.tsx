@@ -16,9 +16,10 @@ const RecursiveTableRow = (props: Row) => {
 			    ${styles[`${cssClass}`]}
 			`}
 			>
-				<h4>{lineName}</h4>
-				<span>{`id: ${id}`}</span>
-
+				<h4>
+					{lineName}
+					<div className={styles.id}>{`id: ${id}`}</div>
+				</h4>
 				<h5>{cssClass}</h5>
 			</div>
 			{description && <>{description}</>}
