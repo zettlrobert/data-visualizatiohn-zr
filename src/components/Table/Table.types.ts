@@ -23,4 +23,3 @@ export interface Row {
 	lineValues: RowValues[];
 	subLines?: Row[];
 }
-

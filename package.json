@@ -27,7 +27,7 @@
     "lint": "eslint --ext .ts --ext .tsx .",
     "lint:style": "npx stylelint 'src/**/*.scss' --fix",
     "lint:js": "yarn lint -- --fix",
-    "lint:fix": "lint:js && lint:style"
+    "lint:fix": "yarn lint:js && yarn lint:style"
   },
   "eslintConfig": {
     "extends": [
