@@ -1,26 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Allocations from './data/allocation.json';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+	/*  TODO: create interface for allocation data
+	 * Note: A store could be used if more data sets are provided - for this use case i decided on context.
+	 * */
+
+	/* Context Object (AllocationData) */
+	const AllocationData = React.createContext<null | any>(null);
+
+	const test = 'teststring';
+	return (
+		<div className="App">
+			<header className="App-header">
+				<h1>data-visualization-zr</h1>
+				{test}
+			</header>
+			{/* For this demo all Components will have Access to all Data */}
+			<AllocationData.Provider value={Allocations}>
+				<p>Data</p>
+			</AllocationData.Provider>
+		</div>
+	);
+};
 
 export default App;
