@@ -1,0 +1,65 @@
+/* Line Value Classes - Just add Background Color
+ * To get all cssClasses referended in the json run some unix magic on the file (README.md)
+ */
+.RecursiveRowContainer {
+  display: flex;
+  flex-wrap: no-wrap;
+}
+
+.RecursiveValueContainer {
+  width: 250px;
+  padding: 8px;
+  margin: 2px;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.Row {
+  padding: 16px 0px;
+
+  .RowTitle {
+	padding: 8px;
+	display: flex;
+	align-items: center;
+	border-radius: 6px;
+
+	h5 {
+	  margin-left: auto;
+	  mrign-right: 16px;
+	}
+  }
+
+  .SubRow {
+	padding: 8px;
+  }
+}
+
+
+
+.gray {
+  background-color: var(--grey);
+}
+
+.blue {
+  background-color: var(--blue); 
+}
+
+.light {
+  background-color: var(--light);
+}
+
+.Allocation {
+  background-color: var(--allocation);
+}
+
+.Classification {
+  background-color: var(--classification);
+}
+
+.Ownership {
+  background-color: var(--ownership);
+}
+
+.Security {
+  background-color: var(--security);
+}

@@ -1,25 +1,27 @@
 import React from 'react';
+import Legend from './components/Legend';
+import Table from './components/Table';
 import Allocations from './data/allocation.json';
+import './globals.scss';
+import './styles/theme.scss';
+
+/* Context Object (AllocationData) */
+export const AllocationData = React.createContext<null | any>(null);
 
 const App = () => {
-	/*  TODO: create interface for allocation data
-	 * Note: A store could be used if more data sets are provided - for this use case i decided on context.
-	 * */
+	/* eslint-disable-next-line */
+	console.log('data-visualization-zr, hello dev ;)');
 
-	/* Context Object (AllocationData) */
-	const AllocationData = React.createContext<null | any>(null);
-
-	const test = 'teststring';
 	return (
 		<div className="App">
 			<header className="App-header">
 				<h1>data-visualization-zr</h1>
-				{test}
 			</header>
 			{/* For this demo all Components will have Access to all Data */}
 			<AllocationData.Provider value={Allocations}>
-				<p>Data</p>
+				<Table />
 			</AllocationData.Provider>
+			<Legend />
 		</div>
 	);
 };

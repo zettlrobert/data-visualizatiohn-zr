@@ -1,0 +1,18 @@
+@mixin defaultTheme {
+  --grey: #808080;
+  --blue: #347e7f;
+  --light: #feffbd;
+  --allocation: #38308d;
+  --classification: #6659f2;
+  --ownership: #7390f9;
+  --security: #6abffa;
+  --accent: #8c63fa;
+  --accent-dark: #1e0365;
+
+  --background-color: #292929;
+  --modal-background: rgba(82, 82, 82, 0.95);
+}
+
+:root {
+  @include defaultTheme
+}
